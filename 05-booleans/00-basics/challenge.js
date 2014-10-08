@@ -11,8 +11,8 @@ module.exports.inBetween = function(lower, middle, upper) {
 };
 
 module.exports.outsideRanges = function(number) {
-            return ((number >= 10) != (number <= 20)) && ((42 < number) != (number <= 75)) && ((1 < number) != (number < 6)); // So to fully understand this: 
-  // not between 10 and 20, it also can't be 10 or 20 : This means thats the "number" can be any value. Also -My boundaries are 10 and 20.  So if a random number is chosen and lets say its 15, 15 is between 10 and 20, thus - The parameters stated it cant be between 10-20 and 15 is so it would be true. 
+            return ((number < 10) || (number > 20)) && ((number <= 42) || (number > 75)) && ((number <=1) || (number >= 6));  // So to fully understand this: 
+  // not between 10 and 20, it also can't be 10 or 20 : This means thats the "number" can be any value. Also -My boundaries are 10 and 20.  This means to make the first test true the number has to be less than 10 so negatives to 9 make it true. Then - numbers greater than 20 also meet the demands of the not between 10 and 20. The reason we chose the OR operator is because  
 
 };
 
