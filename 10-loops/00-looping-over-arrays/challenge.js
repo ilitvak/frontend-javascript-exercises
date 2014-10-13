@@ -18,3 +18,8 @@ module.exports.addIndex = function(array){
   })
   
 }
+// var map = function(fn, array){
+  // for(var numb = 0; numb < array.length; numb++){
+   //  array[numb] = fn(array[numb], numb)
+ // }
+// }
